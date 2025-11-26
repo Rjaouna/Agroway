@@ -1,6 +1,12 @@
 body {
-    background-color: rgb(255, 255, 255);
-    font-family: "OpenSansExtraBold";
+    background-color: #ffffff;
+    font-size: 1.5rem;        /* Taille standard (16px) */
+    line-height: 1.6;       /* Meilleure lisibilité */
+    font-weight: 400;
+}
 
-
+p {
+    font-family: "OpenSans", sans-serif;
+    font-size: 1.5rem;     /* Un peu plus grand que le texte général */
+    line-height: 1.7;       /* Respiration du texte */
 }
