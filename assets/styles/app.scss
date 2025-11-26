@@ -1,0 +1,66 @@
+@import "bootstrap/scss/functions";
+
+// Typography personnalisée
+@font-face {
+  font-family: "OpenSansExtraBold";
+  src: url("../../public/assets/fonts/OpenSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+// 🎨 Tes couleurs personnalisées (avant Bootswatch !)
+$primary: #FF0000;        // Exemple vert
+$secondary: #6c757d;
+$success: #20c997;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+$foregroundwhite: #F7F7F7;
+$foregroundblack: #0B0B0B;
+$backgroundwhite: #FCFCFC;
+$backgroundblack: #060606;
+
+// 🌈 Ton propre set si tu veux
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "foregroundwhite": $foregroundwhite,
+  "foregroundblack": $foregroundblack,
+  "backgroundwhite": $backgroundwhite,
+  "backgroundblack": $backgroundblack,
+  
+);
+
+// Bootswatch variables
+@import "bootswatch/dist/sketchy/variables";
+
+// Bootstrap core
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Bootstrap styles
+@import "bootstrap/scss/bootstrap";
+
+// Bootswatch overrides
+@import "bootswatch/dist/sketchy/bootswatch";
+.navbar .nav-link {
+  color: #FCFCFC !important;
+}
+.navbar-brand {
+  color: #FCFCFC !important;
+}
+.navbar-toggler {
+  border-color: #FCFCFC !important;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
