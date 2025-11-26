@@ -1,142 +1,187 @@
 <div id="carouselExampleDark" class="carousel carousel-dark slide">
 	<div class="carousel-indicators">
-		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active bg-primary" aria-current="true" aria-label="Slide 1"></button>
-<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="bg-info"  aria-label="Slide 2"></button>
-
-<button type="button" data-bs-target="#carouselExampleDark" class="bg-success"  data-bs-slide-to="2" aria-label="Slide 3"></button>
-
+		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active bg-primary"></button>
+		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="bg-info"></button>
+		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="bg-success"></button>
 	</div>
 
 	<div
 		class="carousel-inner">
 
-		<!-- SLIDE 1 - Glaces -->
+		<!-- SLIDE 1 -->
 		<div class="carousel-item active" data-bs-interval="6000">
-<img src="{{ asset('assets/img/slide-douceur.jpg') }}" class="d-block w-100" alt="Glaces Agroway">
+			<img
+			src="{{ asset('assets/img/slide-douceur.jpg') }}" class="d-block w-100" alt="slide">
 
+			<!-- ⭐ 7 MINI IMAGES -->
+			<div
+				class="mini-images-wrapper">
 
-			<div class="carousel-caption d-none d-md-block">
-				<h1 class="fw-bold display-2">Le plaisir glacé signé AGROWAY</h1>
+				<!-- Gauche -->
+				<img src="{{asset('assets/img/element1.svg')}}" class="mini-img1 mini-left">
+				<img
+				src="{{asset('assets/img/element2.svg')}}" class="mini-img2 mini-left mini-left-2">
 
-				<p class="lead mb-4">
-					Découvrez nos glaces savoureuses, nos nouvelles créations et toute une gamme pleine de fraîcheur.
-				</p>
+				<!-- Droite -->
+				<img src="{{asset('assets/img/element4.svg')}}" class="mini-img3 mini-right">
+				<img
+				src="{{asset('assets/img/element3.svg')}}" class="mini-img4 mini-right mini-right-2">
 
-				<a href="#" class="btn btn-lg btn-primary px-5 py-3 shadow">Découvrir</a>
+				<!-- Bas centre -->
+				<div class="mini-bottom">
+					<img src="{{asset('assets/img/middle.svg')}}" class="mini-img">
+				</div>
 			</div>
+
+			<!-- ⭐ TEXTE CENTRÉ ABSOLU -->
+			<div class="carousel-center-content">
+				<h1 class="fw-bold display-2 text-primary">Le plaisir glacé signé</h1>
+				<h2 class="mb-4 text-foregroundblack">
+					Nos nouvelles créations pleines de fraîcheur.
+				</h2>
+
+				<a href="#" class="btn btn-lg btn-foregroundwhite px-5 py-3 shadow">
+					Découvrez nos produits
+				</a>
+			</div>
+
 		</div>
 
-		<!-- SLIDE 2 - Glaces variées -->
-		<div class="carousel-item" data-bs-interval="6000">
-<img src="{{ asset('assets/img/slide-douceur.jpg') }}" class="d-block w-100" alt="Variété de glaces Agroway">
-
-
-
-			<div class="carousel-caption d-none d-md-block">
-				<h1 class="fw-bold display-2">Un monde de saveurs glacées</h1>
-
-				<p class="lead mb-4">
-					Sorbets, crèmes glacées, cornets… un univers de goûts pour petits et grands.
-				</p>
-
-				<a href="#" class="btn btn-lg btn-primary px-5 shadow">Découvrir</a>
-				<a href="#" class="btn btn-lg btn-primary px-5 py-3 shadow">Découvrir</a>
-			</div>
-		</div>
-
-		<!-- SLIDE 3 – Pâtes à tartiner -->
-		<div class="carousel-item" data-bs-interval="6000">
-<img src="{{ asset('assets/img/slide-douceur.jpg') }}" class="d-block w-100" alt="Pâte à tartiner Agroway">
-
-
-
-			<div class="carousel-caption d-none d-md-block">
-				<h1 class="fw-bold display-2">La gourmandise à tartiner</h1>
-
-				<p class="lead mb-4">
-					Nos pâtes à tartiner riches, onctueuses et irrésistibles… pour un moment pur plaisir.
-				</p>
-
-				<a href="#" class="btn btn-lg btn-primary px-5 py-3 shadow">Découvrir</a>
-			</div>
-		</div>
+		
 
 	</div>
 
 	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="visually-hidden">Previous</span>
+		<span class="carousel-control-prev-icon"></span>
 	</button>
 
 	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="visually-hidden">Next</span>
+		<span class="carousel-control-next-icon"></span>
 	</button>
 </div>
 
 <style>
-	#carouselExampleDark {
-		height: 100vh;
-		border-radius: 0 0 22px 22px;
-		overflow: hidden;
-		position: relative;
-	}
+	/* Zone texte CENTRÉE ABSOLUMENT */
+.carousel-center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* ⭐ CENTRÉ PARFAIT */
+    text-align: center;
+    z-index: 10;
+    color: #fff;
+}
 
-	#carouselExampleDark .carousel-item img {
-		height: 100vh;
-		object-fit: cover;
-		filter: brightness(75%);
-	}
+/* Mini-images */
+.mini-images-wrapper {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
 
-	#carouselExampleDark .carousel-caption {
-top: 25vh;
-
-
-		animation: fadeUp 2.2s ease-out;
-	}
-
-	#carouselExampleDark .carousel-caption h5,
-	#carouselExampleDark .carousel-caption h1 {
-		font-size: 5rem;
-		font-weight: 900;
-color: #F7F7F7;
+.mini-img1 {
+    width: 450px;
+height: 450px;
 
 
+    object-fit: cover;
+    position: absolute;
+}
+.mini-img2 {
+    width: 650px;
+    height: 650px;
+    object-fit: cover;
+    position: absolute;
+}
+.mini-img3 {
+width: 500px;
+height: 500px;
+    object-fit: cover;
+    position: absolute;
+}
+.mini-img4 {
+width: 650px;
+height: 650px;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* Gauche */
+.mini-left { top: 30%; left: -150px; }
+.mini-left-2 { top: 54%; left: -150px; }
 
 
-	}
+/* Droite */
+.mini-right { top: 20%; right: -150px; }
+.mini-right-2 { top: 50%; right: -150px; }
 
-	#carouselExampleDark .carousel-caption p {
-		font-size: 1.5rem;
-		color: #F7F7F7;
-font-weight: 300;
 
-	}
+/* Bas centre */
+.mini-bottom {
+    position: absolute;
+    bottom: -140px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-	@keyframes fadeUp {
-		from {
-			opacity: 0;
-			transform: translateY(25px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
+.mini-bottom .mini-img {
+width: 500px;
+height: 500px;
 
-	@media(max-width: 768px) {
-		#carouselExampleDark {
-			height: 60vh;
-		}
-		#carouselExampleDark .carousel-item img {
-			height: 60vh;
-		}
-		#carouselExampleDark .carousel-caption h1 {
-			font-size: 2rem;
-		}
-		#carouselExampleDark .carousel-caption p {
-			font-size: 1rem;
-		}
-	}
+}
 </style>
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const animateFloat = (selector, amplitude = 20, speed = 3500, reverse = false) => {
+        const el = document.querySelector(selector);
+        if (!el) return;
+
+        const loop = () => {
+            el.animate(
+                [
+                    { transform: "translate(0, 0)" },
+                    { transform: `translate(${reverse ? -amplitude : amplitude}px, ${amplitude}px)` },
+                    { transform: "translate(0, 0)" }
+                ],
+                {
+                    duration: speed,
+                    iterations: Infinity,
+                    easing: "ease-in-out"
+                }
+            );
+        };
+
+        loop();
+    };
+
+    // ⭐ Anime les images de gauche
+    animateFloat(".mini-img1", 25, 4200);            // flottement léger
+    animateFloat(".mini-img2", 30, 5000, true);     // mouvement inverse
+
+    // ⭐ Anime les images de droite
+    animateFloat(".mini-img3", 35, 4600);
+    animateFloat(".mini-img4", 28, 5400, true);
+
+    // ⭐ Animation du bas (effet respiration)
+    const bottom = document.querySelector(".mini-bottom .mini-img");
+    if (bottom) {
+        bottom.animate(
+            [
+                { transform: "scale(1)" },
+                { transform: "scale(1.04)" },
+                { transform: "scale(1)" }
+            ],
+            {
+                duration: 5000,
+                iterations: Infinity,
+                easing: "ease-in-out"
+            }
+        );
+    }
+
+});
+</script>
 
