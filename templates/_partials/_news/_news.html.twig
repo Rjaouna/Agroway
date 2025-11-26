@@ -1,0 +1,165 @@
+<section class="" style="background:#fff;">
+	<div
+		class="container">
+
+		<!-- 🔥 Titre du bloc -->
+		<div class="text-center mb-5">
+			<h2 class="fw-bold text-primary" style="font-size:2.6rem;">
+				Nos
+				<span class="text-danger">Nouveautés</span>
+			</h2>
+			<div style="width:80px;height:4px;background:#F4C95D;margin:10px auto;border-radius:5px;"></div>
+			<p class="text-secondary">Découvrez nos dernières créations artisanales fraîchement ajoutées.</p>
+		</div>
+
+		<!-- 🎠 CAROUSEL -->
+		<div id="carouselNouveautes" class="carousel slide" data-bs-ride="carousel">
+
+			<div
+				class="carousel-inner py-5">
+
+				{# SLIDE 1 (3 cartes) #}
+				<div class="carousel-item active">
+					<div class="row g-4">
+
+						<div class="col-md-4">
+							<div class="new-card shadow border-0 rounded-4 h-100">
+								<img src="{{ asset('assets/img/glace-francaise-1.jpeg') }}" class="card-img-top" alt="">
+								<div class="p-4 text-center">
+									<h5 class="fw-bold text-primary">Parfum Pistache</h5>
+									<p class="text-secondary small">
+										Glace pistache naturelle, fraîche et gourmande.
+									</p>
+									<a href="#" class="btn btn-primary btn-sm px-4">Découvrir</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="new-card shadow border-0 rounded-4 h-100">
+								<img src="{{ asset('assets/img/glace-francaise-1.jpeg') }}" class="card-img-top" alt="">
+								<div class="p-4 text-center">
+									<h5 class="fw-bold text-primary">Pâte à tartiner noisette</h5>
+									<p class="text-secondary small">
+										Encore plus gourmande, sans huile de palme.
+									</p>
+									<a href="#" class="btn btn-primary btn-sm px-4">Découvrir</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="new-card shadow border-0 rounded-4 h-100">
+								<img src="{{ asset('assets/img/glace-francaise-1.jpeg') }}" class="card-img-top" alt="">
+								<div class="p-4 text-center">
+									<h5 class="fw-bold text-primary">Yaourts aux fruits</h5>
+									<p class="text-secondary small">
+										Une gamme légère et fruitée pour vos petits-déjeuners.
+									</p>
+									<a href="#" class="btn btn-primary btn-sm px-4">Découvrir</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				{# SLIDE 2 (2 cartes) #}
+				<div class="carousel-item">
+					<div class="row g-4 justify-content-center">
+
+						<div class="col-md-4">
+							<div class="new-card shadow border-0 rounded-4 h-100">
+								<img src="{{ asset('assets/img/glace-francaise-1.jpeg') }}" class="card-img-top" alt="">
+								<div class="p-4 text-center">
+									<h5 class="fw-bold text-primary">Glace caramel beurre salé</h5>
+									<p class="text-secondary small">
+										Un équilibre parfait entre douceur et caractère.
+									</p>
+									<a href="#" class="btn btn-primary btn-sm px-4">Découvrir</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="new-card shadow border-0 rounded-4 h-100">
+								<img src="{{ asset('assets/img/glace-francaise-1.jpeg') }}" class="card-img-top" alt="">
+								<div class="p-4 text-center">
+									<h5 class="fw-bold text-primary">Crème dessert Vanille Bourbon</h5>
+									<p class="text-secondary small">
+										Crémeux, subtil, un vrai plaisir artisanal.
+									</p>
+									<a href="#" class="btn btn-primary btn-sm px-4">Découvrir</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<!-- 🟦 Boutons navigation -->
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselNouveautes" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Précédent</span>
+			</button>
+
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselNouveautes" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Suivant</span>
+			</button>
+
+			<!-- ⚪⚪⚪ Petits points de pagination (optionnel) -->
+			<div class="carousel-indicators mt-4">
+				<button type="button" data-bs-target="#carouselNouveautes" data-bs-slide-to="0" class="active bg-danger" aria-current="true" aria-label="Slide 1"></button>
+<button type="button" data-bs-target="#carouselNouveautes" data-bs-slide-to="1" class="bg-danger"  aria-label="Slide 2"></button>
+
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+<style>
+	.new-card {
+		background: rgba(255, 255, 255, 0.6);
+		backdrop-filter: blur(12px);
+		border-radius: 18px;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+		transition: all 0.45s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.new-card:hover {
+		transform: translateY(-6px) scale(1.015);
+		box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+	}
+
+	.new-card::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -150%;
+		width: 120%;
+		height: 100%;
+		background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+		opacity: 0;
+		transition: all 0.6s ease;
+	}
+
+	.new-card:hover::after {
+		left: 150%;
+		opacity: 1;
+	}
+
+	.new-card img {
+		border-top-left-radius: 18px;
+		border-top-right-radius: 18px;
+	}
+</style>
+
+

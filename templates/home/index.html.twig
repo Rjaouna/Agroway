@@ -4,56 +4,20 @@
 {% endblock %}
 
 {% block body %}
-{{ include('_partials/_navbar/_slide/_slide.html.twig') }}
+{{ include('_partials/_slide/_slide.html.twig') }}
+
+
 {{ include('_partials/_categories_home_page/_categories_home_page.html.twig') }}
+{{ include('_partials/_news/_news.html.twig') }}
+
+{{ include('_partials/_nos_engagements/_nos_engagements.html.twig') }}
+{{ include('_partials/_socials/_socials.html.twig') }}
+{{ include('_partials/_footer/_footer.html.twig') }}
 
 
-	<div
-		class="container-fluid my-4">
 
-		<!-- Conteneur scroll horizontal -->
-		<div
-			class="d-flex flex-row gap-3 overflow-auto pb-2" style="white-space: nowrap;">
 
-			<!-- Chaque bloc = rectangle large -->
-			<div class="rounded p-4 bg-primary text-foregroundwhite" style="min-width: 350px;">
-				<strong>Primary Red</strong><br>
-				#FF0000
-			</div>
 
-			<div class="rounded p-4 bg-foregroundwhite text-backgroundblack border border-borderblack" style="min-width: 350px;">
-				<strong>Foreground White</strong><br>
-				#F7F7F7
-			</div>
-
-			<div class="rounded p-4 bg-foregroundblack text-foregroundwhite" style="min-width: 350px;">
-				<strong>Foreground Black</strong><br>
-				#0B0B0B
-			</div>
-
-			<div class="rounded p-4 bg-backgroundwhite text-backgroundblack border border-borderblack" style="min-width: 350px;">
-				<strong>Background White</strong><br>
-				#FCFCFC
-			</div>
-
-			<div class="rounded p-4 bg-backgroundblack text-foregroundwhite" style="min-width: 350px;">
-				<strong>Background Black</strong><br>
-				#060606
-			</div>
-
-		</div>
-	</div>
-<div class="container">
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
-<button type="button" class="btn btn-link">Link</button>
-
-</div>  
+	
 {% endblock %}
 

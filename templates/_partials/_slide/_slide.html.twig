@@ -1,8 +1,10 @@
 <div id="carouselExampleDark" class="carousel carousel-dark slide">
 	<div class="carousel-indicators">
-		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active bg-primary" aria-current="true" aria-label="Slide 1"></button>
+<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="bg-info"  aria-label="Slide 2"></button>
+
+<button type="button" data-bs-target="#carouselExampleDark" class="bg-success"  data-bs-slide-to="2" aria-label="Slide 3"></button>
+
 	</div>
 
 	<div
@@ -10,7 +12,8 @@
 
 		<!-- SLIDE 1 - Glaces -->
 		<div class="carousel-item active" data-bs-interval="6000">
-			<img src="{{ asset('assets/img/agroway-slide-1.jpg') }}" class="d-block w-100" alt="Glaces Agroway">
+<img src="{{ asset('assets/img/slide-douceur.jpg') }}" class="d-block w-100" alt="Glaces Agroway">
+
 
 			<div class="carousel-caption d-none d-md-block">
 				<h1 class="fw-bold display-2">Le plaisir glacé signé AGROWAY</h1>
@@ -25,7 +28,8 @@
 
 		<!-- SLIDE 2 - Glaces variées -->
 		<div class="carousel-item" data-bs-interval="6000">
-<img src="{{ asset('assets/img/agroway-slide-1.jpg') }}" class="d-block w-100" alt="Variété de glaces Agroway">
+<img src="{{ asset('assets/img/slide-douceur.jpg') }}" class="d-block w-100" alt="Variété de glaces Agroway">
+
 
 
 			<div class="carousel-caption d-none d-md-block">
@@ -41,7 +45,8 @@
 
 		<!-- SLIDE 3 – Pâtes à tartiner -->
 		<div class="carousel-item" data-bs-interval="6000">
-<img src="{{ asset('assets/img/agroway-slide-1.jpg') }}" class="d-block w-100" alt="Pâte à tartiner Agroway">
+<img src="{{ asset('assets/img/slide-douceur.jpg') }}" class="d-block w-100" alt="Pâte à tartiner Agroway">
+
 
 
 			<div class="carousel-caption d-none d-md-block">
@@ -70,29 +75,32 @@
 
 <style>
 	#carouselExampleDark {
-		height: 70vh;
+		height: 100vh;
 		border-radius: 0 0 22px 22px;
 		overflow: hidden;
 		position: relative;
 	}
 
 	#carouselExampleDark .carousel-item img {
-		height: 70vh;
+		height: 100vh;
 		object-fit: cover;
 		filter: brightness(75%);
 	}
 
 	#carouselExampleDark .carousel-caption {
-		bottom: 25vh;
-		z-index: 10;
-		animation: fadeUp 1.2s ease-out;
+top: 20vh;
+
+
+		animation: fadeUp 2.2s ease-out;
 	}
 
 	#carouselExampleDark .carousel-caption h5,
 	#carouselExampleDark .carousel-caption h1 {
 		font-size: 5rem;
 		font-weight: 900;
-color: #000000ff;
+color: #F7F7F7;
+
+
 
 
 	}
