@@ -42,9 +42,18 @@
 					Nos nouvelles créations pleines de fraîcheur.
 				</h2>
 
-<a href="#" class="btn btn-lg btn-primary text-foregroundwhite px-5 py-3 shadow">
+<a id="btnDiscoverGlaces" href="#" class=" btn btn-lg btn-foregroundwhite text-foregroundblack px-5 py-3 shadow">
 
-	Découvrez nos glaces !
+
+	<span class="fw-bold">
+
+
+
+Découvrez nos glaces !
+
+
+
+</span>
 
 
 				</a>
@@ -69,7 +78,9 @@
 	/* Zone texte CENTRÉE ABSOLUMENT */
 .carousel-center-content {
     position: absolute;
-    top: 50%;
+top: 40%;
+
+
     left: 50%;
     transform: translate(-50%, -50%); /* ⭐ CENTRÉ PARFAIT */
     text-align: center;
@@ -141,7 +152,18 @@ width: 500px;
 height: 500px;
 
 }
+#btnDiscoverGlaces {
+        transition: transform 0.3s ease;
+        display: inline-block; /* important pour le zoom */
+    }
 
+    #btnDiscoverGlaces:hover {
+        transform: scale(1.06);
+    }
+
+    #btnDiscoverGlaces:active {
+        transform: scale(0.98);
+    }
 </style>
  <script>
 document.addEventListener("DOMContentLoaded", () => {
