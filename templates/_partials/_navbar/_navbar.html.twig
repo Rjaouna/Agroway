@@ -1,5 +1,4 @@
 <nav class="navbar navbar-expand-lg bg-primary shadow-lg border-0 position-absolute start-0 end-0 mx-2 z-3" style="top: 20px;" data-bs-theme="dark">
-
 	<div
 		class="container-fluid">
 
@@ -14,40 +13,40 @@
 		</button>
 
 		<!-- MENU -->
-<div class="collapse navbar-collapse order-1" id="navbarColor01">
+		<div class="collapse navbar-collapse order-1" id="navbarColor01">
 
-<ul class="navbar-nav mx-auto gap-3">
+			<ul class="navbar-nav mx-auto gap-3">
 
 				<li class="nav-item">
 					<a class="nav-link text-white" href="#">Accueil</a>
-</li>
+				</li>
 
 				<li class="nav-item">
 					<a class="nav-link text-white" href="#">Catalogue</a>
-</li>
+				</li>
 
 				<li class="nav-item">
 					<a class="nav-link text-white" href="#">Promotions</a>
-</li>
+				</li>
 
 				<li class="nav-item">
 					<a class="nav-link text-white" href="#">Nouveautés</a>
-</li>
+				</li>
 
 				<li class="nav-item">
 					<a class="nav-link text-white" href="#">Événements</a>
-</li>
+				</li>
 
-<li class="nav-item">
-	<a class="nav-link text-white" href="#">Contact</a>
-</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="#">Contact</a>
+				</li>
 
-<li class="nav-item"></li>
+				<li class="nav-item">
+<a class="nav-link text-white {% if app.request.get('_route') == 'app_graphic_chart' %}active{% endif %}" href="{{ path('app_graphic_chart') }}">Design Brand</a>
 
-<a class="nav-link text-white" href="{{ path('app_graphic_chart') }}">Design Brand</a></li>
+				</li>
 
-</ul>
-
+			</ul>
 		</div>
 	</div>
 </nav>
@@ -64,6 +63,26 @@
 		transform: scale(1.12);
 		color: #ffffff !important;
 	}
+
+	/* Visible quand actif */
+	.navbar-nav .nav-link.active {
+		color: #242424ff !important;
+		transform: scale(1.12);
+		font-weight: 600;
+	}
 </style>
 
-
+{% block javascripts %}
+	 <script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const links = document.querySelectorAll('.navbar .nav-link');
+	
+				links.forEach(link => {
+					link.addEventListener('click', function () {
+						links.forEach(l => l.classList.remove('active'));
+						this.classList.add('active');
+					});
+				});
+			});
+		</script>
+{% endblock %}
