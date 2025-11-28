@@ -1,98 +1,67 @@
 <section class="pb-5" style="
-background-image: url('{{asset('assets/img/bg-cat.png')}}');
-
-background-position: bottom center;
-
-
-				background-repeat: no-repeat;
-				background-size: contain;
-
-
-			">
-<div class="container-fluid" style="background-color: rgb(253 243 234) !important">
-
-
-
-	<div
-		class="container py-5">
-
-		<!-- 🌟 TITRE DU BLOC -->
-		<div class="text-center mb-5">
-			<h1 class="fw-bold text-backgroundblack" style="font-size:4rem">
-				
-<span class="text-primary">Des saveurs</span>
-
-				qui parlent d’elles-mêmes
-			</h1>
-
-			<div style="width:80px; height:4px; background:#F4C95D; margin:10px auto; border-radius:5px;"></div>
-
-<p class="text-secondary"></p>
-
-
-				Découvrez nos créations artisanales, faites avec passion et des ingrédients de qualité.
-			</p>
-		</div>
-
+		    background-image: url('{{asset('assets/img/bg-cat.png')}}');
+		    background-position: bottom center;
+		    background-repeat: no-repeat;
+		    background-size: contain;
+		">
+	<div class="container-fluid" style="background-color: rgb(253 243 234) !important">
 		<div
-			class="row g-4">
+			class="container py-5">
 
-			<!-- 🟤 Bloc 1 – Glaces -->
-			<div class="col-md-4">
-				<div class="card shadow h-100 border-0" style="background-color:#FFF8E1;">
-<img src="{{ asset('assets/img/ice-cat.jpg') }}" class="card-img-top p-3" alt="Glace">
+			<!-- 🌟 TITRE -->
+			<div class="text-center mb-5">
+				<h1 class="fw-bold text-backgroundblack" style="font-size:4rem">
+					<span class="text-primary">Des saveurs</span>
+					qui parlent d’elles-mêmes
+				</h1>
 
+				<div style="width:80px; height:4px; background:#F4C95D; margin:10px auto; border-radius:5px;"></div>
 
-					<div class="card-body text-center">
-						<h5 class="card-title fw-bold text-primary">Glaces</h5>
-						<p class="card-text small text-secondary">
-							Découvrez nos glaces artisanales, pleines de fraîcheur et de saveurs.
-						</p>
-<a href="#" class="btn btn-primary btn-lg">Découvrir nos glaces</a>
-
-
-					</div>
-				</div>
+				<p class="text-secondary mt-3">
+					Découvrez nos créations artisanales, faites avec passion et des ingrédients de qualité.
+				</p>
 			</div>
 
-			<!-- 🟤 Bloc 2 – Pâte à tartiner -->
-			<div class="col-md-4">
-				<div class="card shadow h-100 border-0" style="background-color:#FFF8E1;">
-<img src="{{ asset('assets/img/choco-cat.jpg') }}" class="card-img-top p-3" alt="Pâte à tartiner">
+			<div
+				class="row justify-content-center g-4">
 
+				<!-- 🟤 Bloc 1 – Glaces -->
+				<div class="col-md-5">
+					<div class="card shadow h-100 border-0 category-card">
+						<img src="{{ asset('assets/img/ice-cat.jpg') }}" class="card-img-top p-3 rounded-4" alt="Glace">
 
-					<div class="card-body text-center">
-						<h5 class="card-title fw-bold text-primary">Pâte à tartiner</h5>
-						<p class="card-text small text-secondary">
-							Une pâte onctueuse, gourmande et irrésistible, faite maison.
-						</p>
-<a href="#" class="btn btn-primary btn-lg">Découvrir nos Pâte à tartiner</a>
-
-
+						<div class="card-body text-center">
+							<h5 class="card-title fw-bold text-glace fs-2">Glaces</h5>
+							<p class="card-text text-secondary mb-4">
+								Des glaces artisanales, fraîches et authentiques.
+							</p>
+							<a href="#" class="btn btn-glace btn-lg px-4">Découvrir nos glaces</a>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- 🟤 Bloc 3 – Yaourts -->
-			<div class="col-md-4">
-				<div class="card shadow h-100 border-0" style="background-color:#FFF8E1;">
-					<img src="{{ asset('assets/img/glace-francaise-1.jpeg') }}" class="card-img-top p-3" alt="Yaourts">
-					<div class="card-body text-center">
-						<h5 class="card-title fw-bold text-primary">Yaourts</h5>
-						<p class="card-text small text-secondary">
-							Des yaourts nature et aromatisés fabriqués avec du lait frais.
-						</p>
-<a href="#" class="btn btn-primary btn-lg">Découvrir Yaourts</a>
+				<!-- 🟤 Bloc 2 – Pâte à tartiner -->
+				<div class="col-md-5">
+					<div class="card shadow h-100 border-0 category-card">
+						<img src="{{ asset('assets/img/choco-cat.jpg') }}" class="card-img-top p-3 rounded-4" alt="Pâte à tartiner">
 
-
+						<div class="card-body text-center">
+							<h5 class="card-title fw-bold text-choco fs-2">Pâte à tartiner</h5>
+							<p class="card-text text-secondary mb-4">
+								Une pâte onctueuse, gourmande et irrésistible.
+							</p>
+							<a href="#" class="btn btn-choco btn-lg px-4">Découvrir nos pâtes à tartiner</a>
+						</div>
 					</div>
 				</div>
+
 			</div>
 
 		</div>
-</div></div>
-
+	</div>
 </section>
+
+
 
 <style>
 .card {

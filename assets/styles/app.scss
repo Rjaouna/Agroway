@@ -9,6 +9,8 @@
 
 // 🎨 Tes couleurs personnalisées (avant Bootswatch !)
 $primary: #FF0000;        
+$glace: #66cce9;        
+$choco: #815443;        
 $primarylado: #D70B4E;        
 $primarypralichocco: #CC2125;        
 $secondary: #6c757d;
@@ -26,6 +28,8 @@ $backgroundblack: #060606;
 // 🌈 Ton propre set si tu veux
 $theme-colors: (
   "primary": $primary,
+  "glace": $glace,
+  "choco": $choco,
   "primarylado": $primarylado,
   "primarypralichocco": $primarypralichocco,
   "secondary": $secondary,
