@@ -24,9 +24,23 @@
         {% endblock %}
     </head>
     <body>
+{% set route = app.request.attributes.get('_route') %}
+
+{% if route starts with 'app_laddo' %}
+	{% set colorTheme = 'primarylado' %}
+{% elseif route starts with 'app_pralichocco' %}
+	{% set colorTheme = 'primarypralichocco' %}
+{% else %}
+	{% set colorTheme = 'primary' %}
+{% endif %}
+
+
 {{ include('_partials/_navbar/_navbar.html.twig') }}
 
 
         {% block body %}{% endblock %}
+{% include '_partials/_footer/_footer.html.twig' %}
+
+
     </body>
 </html>

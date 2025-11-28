@@ -1,0 +1,138 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LaddoController!{% endblock %}
+
+{% block body %}
+
+
+
+<section class="lado-hero">
+<section class="lado-hero-premium d-flex align-items-center">
+    <div class="container text-center">
+
+        <img src="{{ asset('assets/img/logos/laddo-logo-pink.svg') }}" 
+             class="lado-hero-logo mb-4" 
+             alt="Logo Lado">
+
+        <h1 class="fw-bold display-3 text-dark">
+            La Collection <span class="text-primarylado">Lado</span>
+        </h1>
+
+        <p class="lead text-secondary mx-auto mt-3" style="max-width: 650px;">
+            Une expérience glacée élégante, raffinée et gourmande.  
+            Découvrez l’essence de Lado : un savoir-faire artisanal et des saveurs authentiques.
+        </p>
+
+        <a href="#lado-gamme" class="btn btn-primarylado btn-lg px-5 py-3 mt-4 shadow premium-btn">
+            Découvrir la gamme
+        </a>
+    </div>
+</section>
+<section id="lado-gamme" class="lado-presentation py-5">
+	<div class="container">
+		<div class="row align-items-center g-5">
+
+			<div class="col-lg-6">
+				<h2 class="fw-bold text-dark mb-4 display-5">
+					Une gamme au
+					<span class="text-primarylado">style raffiné</span>
+				</h2>
+
+				<p class="fs-5 text-secondary">
+					Lado incarne une vision moderne de la glace artisanale :  
+					                    des textures extraordinaires, des parfums iconiques et une identité élégante qui séduit tous les âges.
+				</p>
+
+				<ul class="list-unstyled fs-5 mt-4">
+					<li>✔ Saveurs signature uniques</li>
+					<li>✔ Ingrédients de haute qualité</li>
+					<li>✔ Présentation élégante</li>
+					<li>✔ Savoir-faire artisanal premium</li>
+				</ul>
+
+				
+			</div>
+
+			<div class="col-lg-6 text-center">
+				<img src="{{ asset('assets/img/slide-lado.jpg') }}" class="img-fluid rounded-4 shadow-lg lado-prez-image" alt="Gamme Lado">
+			</div>
+
+		</div>
+	</div>
+</section>
+{{ include('_partials/_news/_news.html.twig') }}
+
+
+
+
+
+
+<style>
+.product-premium {
+    background-color: #ffffff;
+    border-radius: 20px;
+    transition: all .4s ease;
+}
+
+.product-premium:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.product-premium img {
+    transition: transform .35s ease;
+}
+
+.product-premium:hover img {
+    transform: scale(1.07) rotate(2deg);
+}
+
+.lado-prez-image {
+    transition: all .5s ease;
+}
+
+.lado-prez-image:hover {
+    transform: scale(1.04) translateY(-5px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+}
+
+.lado-hero-premium {
+    background: url('{{ asset("assets/img/slide-lado.jpg") }}') center/cover no-repeat;
+    min-height: 80vh;
+    position: relative;
+}
+
+/* voile léger premium */
+.lado-hero-premium::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.65);
+}
+
+/* contenu */
+.lado-hero-premium .container {
+    position: relative;
+    z-index: 5;
+}
+
+.lado-hero-logo {
+    width: 180px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.premium-btn {
+    border-radius: 40px;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.premium-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+</style>
+
+
+{% endblock %}

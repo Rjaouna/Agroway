@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-primary shadow-lg border-0 position-absolute start-0 end-0 mx-2 z-3" style="top: 20px;" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-{{colorTheme}}  shadow-lg border-0 position-absolute start-0 end-0 mx-2 z-3" style="top: 20px;" data-bs-theme="dark">
+
+
 	<div
 		class="container-fluid">
 
@@ -22,9 +24,13 @@
 						Catalogue
 					</a>
 
-					<ul class="dropdown-menu bg-primary border-0 shadow">
+<ul class="dropdown-menu bg-{{colorTheme}} border-0 shadow">
+
+
 						<li>
-							<a class="dropdown-item text-white" href="#">
+<a class="dropdown-item text-white" href="{{path('app_laddo')}}">
+
+
 								Glaces
 							</a>
 						</li>

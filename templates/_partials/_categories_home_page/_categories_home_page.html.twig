@@ -35,7 +35,7 @@
 							<p class="card-text text-secondary mb-4">
 								Des glaces artisanales, fraîches et authentiques.
 							</p>
-							<a href="#" class="btn btn-glace btn-lg px-4">Découvrir nos glaces</a>
+							<a href="{{path('app_laddo')}}" class="btn btn-glace btn-lg px-4">Découvrir nos glaces</a>
 						</div>
 					</div>
 				</div>
@@ -68,8 +68,62 @@
 	transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+
 .card:hover {
 	transform: scale(1.06);
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
+
+/* Animation WIZ de 2s (secousse douce mais longue) */
+@keyframes wiz {
+    0%   { transform: rotate(0deg); }
+    10%  { transform: rotate(4deg); }
+    20%  { transform: rotate(-4deg); }
+    30%  { transform: rotate(4deg); }
+    40%  { transform: rotate(-4deg); }
+    50%  { transform: rotate(3deg); }
+    60%  { transform: rotate(-3deg); }
+    70%  { transform: rotate(2deg); }
+    80%  { transform: rotate(-2deg); }
+    90%  { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.btn-wiz {
+    animation: wiz 1s ease;
+}
+
+
 </style>
+ <script>
+document.querySelectorAll('.category-card').forEach(card => {
+    let timer;
+
+    card.addEventListener('mouseenter', () => {
+
+        // Chercher le bouton dans cette card
+        const btn = card.querySelector('.btn');
+        if (!btn) return;
+
+        // Démarre le timer 2 secondes
+        timer = setTimeout(() => {
+            btn.classList.add('btn-wiz');
+
+            // Enlève l’animation après la fin pour pouvoir la rejouer
+            setTimeout(() => {
+                btn.classList.remove('btn-wiz');
+}, 2100);
+
+
+}, 1000);
+
+
+    });
+
+    // Si on quitte la card avant 2s : annuler le wiz
+    card.addEventListener('mouseleave', () => {
+        clearTimeout(timer);
+    });
+});
+</script>
+
