@@ -18,10 +18,13 @@
 					                    l’innovation et le respect du consommateur. Nos marques incarnent excellence et authenticité.
 				</p>
 
-				<div class="d-flex flex-wrap gap-2 mt-3">
-					<img src="https://placehold.co/120x60/EEE/31343C" class="brand-logo" alt="Marque 1">
-					<img src="https://placehold.co/120x60/EEE/31343C" class="brand-logo" alt="Marque 2">
-					<img src="https://placehold.co/120x60/EEE/31343C" class="brand-logo" alt="Marque 3">
+<div class="d-flex flex-wrap gap-4 mt-3">
+	<img src="{{ asset('assets/img/logos/laddo-logo-black.svg') }}" class="brand-logo auto-switch" alt="Marque 1">
+
+
+	<img src="{{ asset('assets/img/logos/pralichoco-black.svg') }}" class="brand-logo auto-switch" alt="Marque 2">
+
+
 				</div>
 			</div>
 
@@ -81,7 +84,8 @@
 							<a href="#" class="text-light">Événement majeur 2025</a>
 						</p>
 						<span class="small opacity-75" style="color:#FCFCFC;">
-							Une rencontre dédiée à l’innovation agroalimentaire réunissant experts, partenaires et clients autour des nouvelles tendances du marché.
+Une rencontre dédiée à l’innovation agroalimentaire réunissant experts, partenaires et clients autour...
+
 						</span>
 					</div>
 				</div>
@@ -93,7 +97,8 @@
 							<a href="#" class="text-light">Salon International 2024</a>
 						</p>
 						<span class="small opacity-75" style="color:#FCFCFC;">
-							Présentation de nos nouvelles gammes de produits lors d’un salon mondial réunissant les principaux acteurs de l’industrie alimentaire.
+Présentation de nos nouvelles gammes de produits lors d’un salon mondial réunissant...
+
 						</span>
 					</div>
 				</div>
@@ -105,7 +110,8 @@
 							<a href="#" class="text-light">Lancement d’un nouveau produit</a>
 						</p>
 						<span class="small opacity-75" style="color:#FCFCFC;">
-							Un moment fort célébrant l’arrivée d’un produit innovant conçu pour répondre aux attentes actuelles des consommateurs exigeants.
+Un moment fort célébrant l’arrivée d’un produit innovant conçu pour répondre...
+
 						</span>
 					</div>
 				</div>
@@ -189,3 +195,15 @@ footer.footer::before {
     border-radius: 4px;
 }
 </style>
+ <script>
+document.querySelectorAll('.auto-switch').forEach(img => {
+    const originalSrc = img.src;
+    const hoverSuffix = img.dataset.hover; // ex: "white"
+
+    const hoverSrc = originalSrc.replace('black', 'white');
+
+    img.addEventListener('mouseenter', () => img.src = hoverSrc);
+    img.addEventListener('mouseleave', () => img.src = originalSrc);
+});
+</script>
+
