@@ -1,93 +1,191 @@
-<footer class="pt-5 pb-3 mt-5 bg-primary text-white">
-	<div class="container">
+
+<footer class="footer bg-primary text-white pt-5 pb-4 mt-5">
+
+	<div class="container-fluid text-white">
 
 		<div
-			class="row">
+			class="row gy-5">
 
-			<!-- 🧀 Colonne 1 : Présentation -->
-			<div class="col-md-4 mb-4">
-				<h5 class="mb-3">Le Berger</h5>
-				<p style="font-size:0.9rem; line-height:1.5;">
-					Le Berger met tout son savoir-faire et son expertise au service 
-					                    des consommateurs afin de leur offrir des produits alliant 
-					                    santé et plaisir.
+			<!-- 🧩 Bloc 1 — Groupe Agroway -->
+			<div class="col-lg-3 col-md-6">
+
+				<a class="navbar-brand mx-auto order-0" href="{{ path('app_home') }}">
+					<img src="{{ asset('assets/img/logo-agroway.svg') }}" alt="Groupe Agroway" style="height:50px;" class="mb-4">
+				</a>
+
+				<p class="small" style="color:#FCFCFC;">
+					Le Groupe Agroway est un acteur majeur de l’agroalimentaire, engagé dans la qualité, 
+					                    l’innovation et le respect du consommateur. Nos marques incarnent excellence et authenticité.
 				</p>
+
+				<div class="d-flex flex-wrap gap-2 mt-3">
+					<img src="https://placehold.co/120x60/EEE/31343C" class="brand-logo" alt="Marque 1">
+					<img src="https://placehold.co/120x60/EEE/31343C" class="brand-logo" alt="Marque 2">
+					<img src="https://placehold.co/120x60/EEE/31343C" class="brand-logo" alt="Marque 3">
+				</div>
 			</div>
 
-			<!-- 🔗 Colonne 2 : Liens utiles -->
-			<div class="col-md-4 mb-4">
-				<h5 class=" mb-3">Liens Utiles</h5>
-				<ul class="list-unstyled">
-					<li>
-						<a href="#" class="text-white text-decoration-none">Accueil</a>
-					</li>
-					<li>
-						<a href="#" class="text-white text-decoration-none">Nos Recettes</a>
-					</li>
-					<li>
-						<a href="#" class="text-white text-decoration-none">Nos Engagements</a>
-					</li>
-					<li>
-						<a href="#" class="text-white text-decoration-none">Nos Produits</a>
-					</li>
-					<li>
-						<a href="#" class="text-white text-decoration-none">Nos Fromages</a>
-					</li>
-					<li>
-						<a href="#" class="text-white text-decoration-none">Nos Beurres</a>
-					</li>
-					<li>
-						<a href="#" class="text-white text-decoration-none">Nos Crèmes</a>
-					</li>
-					<li>
-						<a href="#" class="text-white text-decoration-none">Nos Desserts</a>
-					</li>
-				</ul>
+			<!-- 🧩 Bloc 2 — Certifications -->
+			<div class="col-lg-3 col-md-6">
+				<h6 class="fw-bold mb-3 text-uppercase small" style="color:#FCFCFC;">Nos certifications</h6>
+
+				<p class="small" style="color:#FCFCFC;">
+					Nous garantissons une qualité irréprochable grâce à nos standards certifiés et nos 
+					                    processus de fabrication contrôlés.
+				</p>
+
+				<div class="d-flex flex-wrap gap-2">
+					<img src="https://placehold.co/120x60/EEE/31343C" class="brand-logo" alt="Certif 1">
+					<img src="https://placehold.co/120x60/EEE/31343C" class="brand-logo" alt="Certif 2">
+					<img src="https://placehold.co/120x60/EEE/31343C" class="brand-logo" alt="Certif 3">
+				</div>
 			</div>
 
-			<!-- ℹ️ Colonne 3 : À propos -->
-			<div class="col-md-4 mb-4">
-				<h5 class="mb-3">Plus</h5>
-				<ul class="list-unstyled">
+			<!-- 🧩 Bloc 3 — Liens rapides -->
+			<div class="col-lg-3 col-md-6">
+				<h6 class="fw-bold mb-3 text-uppercase small" style="color:#FCFCFC;">Liens rapides</h6>
+
+				<ul class="list-unstyled footer-links">
 					<li>
-						<a href="#" class="text-white text-decoration-none">Notre Histoire</a>
+						<a href="#" class="footer-link">Contact</a>
 					</li>
 					<li>
-						<a href="#" class="text-white text-decoration-none">Contactez-nous</a>
+						<a href="#" class="footer-link">Service Client</a>
 					</li>
 					<li>
-						<a href="#" class="text-white text-decoration-none">À Propos</a>
-					</li>
-					<li>
-						<a href="#" class="text-white text-decoration-none">Mentions Légales</a>
-					</li>
-					<li>
-						<a href="#" class="text-white text-decoration-none">Conditions d'utilisation</a>
+						<a href="#" class="footer-link">Nos Réseaux Sociaux</a>
 					</li>
 				</ul>
 
-				<!-- 🌍 Réseaux sociaux -->
 				<div class="mt-3 d-flex gap-3">
-					<a href="#" class="text-white fs-4">
+					<a href="#" class="social-icon">
 						<i class="bi bi-facebook"></i>
 					</a>
-					<a href="#" class="text-white fs-4">
+					<a href="#" class="social-icon">
 						<i class="bi bi-instagram"></i>
 					</a>
+					<a href="#" class="social-icon">
+						<i class="bi bi-youtube"></i>
+					</a>
+				</div>
+			</div>
+
+			<!-- 🧩 Bloc 4 — Événements (📌 déplacé ici) -->
+			<div class="col-lg-3 col-md-6">
+				<h6 class="fw-bold mb-3 text-uppercase small" style="color:#FCFCFC;">Événements</h6>
+
+				<div class="event-item mb-3 d-flex gap-3">
+					<img src="https://placehold.co/600x400/EEE/31343C" class="event-img" alt="Événement 1">
+					<div>
+						<p class="small fw-bold mb-1" style="color:#FCFCFC;">
+							<a href="#" class="text-light">Événement majeur 2025</a>
+						</p>
+						<span class="small opacity-75" style="color:#FCFCFC;">
+							Une rencontre dédiée à l’innovation agroalimentaire réunissant experts, partenaires et clients autour des nouvelles tendances du marché.
+						</span>
+					</div>
+				</div>
+
+				<div class="event-item mb-3 d-flex gap-3">
+					<img src="https://placehold.co/600x400/EEE/31343C" class="event-img" alt="Événement 2">
+					<div>
+						<p class="small fw-bold mb-1" style="color:#FCFCFC;">
+							<a href="#" class="text-light">Salon International 2024</a>
+						</p>
+						<span class="small opacity-75" style="color:#FCFCFC;">
+							Présentation de nos nouvelles gammes de produits lors d’un salon mondial réunissant les principaux acteurs de l’industrie alimentaire.
+						</span>
+					</div>
+				</div>
+
+				<div class="event-item d-flex gap-3">
+					<img src="https://placehold.co/600x400/EEE/31343C" class="event-img" alt="Événement 3">
+					<div>
+						<p class="small fw-bold mb-1" style="color:#FCFCFC;">
+							<a href="#" class="text-light">Lancement d’un nouveau produit</a>
+						</p>
+						<span class="small opacity-75" style="color:#FCFCFC;">
+							Un moment fort célébrant l’arrivée d’un produit innovant conçu pour répondre aux attentes actuelles des consommateurs exigeants.
+						</span>
+					</div>
 				</div>
 			</div>
 
 		</div>
 
-		<hr
-		class="border-light">
+		<hr class="border-light opacity-25 my-4">
 
-		<!-- 🔻 Bas du footer -->
 		<div class="text-center small">
-			© 2022 Le Berger | Tous Droits Réservés |
-			<br>
-			<span class="opacity-75">Made by Tweemy</span>
+			©
+			<span id="year"></span>
+			Agrouway — Tous droits réservés<br>
+			<span class="opacity-75">Created by : We Digit All - Designed by : Oudades Studio</span>
 		</div>
+
 	</div>
 </footer>
 
+
+
+<style>
+footer.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+footer.footer::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -3px;
+    width: 100%;
+    height: 80px;
+    background: #ffffffff;
+    transform: rotate(-2.5deg);
+    transform-origin: top left;
+}
+
+
+.footer-link {
+    color: #FCFCFC;
+    opacity: 0.85;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    padding: 3px 0;
+    transition: opacity .2s ease;
+}
+
+.footer-link:hover {
+    opacity: 1;
+}
+
+.social-icon {
+    color: #FCFCFC;
+    font-size: 1.5rem;
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+    opacity: .85;
+}
+
+.brand-logo {
+    height: 40px;
+    object-fit: contain;
+    opacity: .9;
+    transition: opacity .3s ease;
+}
+
+.brand-logo:hover {
+    opacity: 1;
+}
+
+.event-img {
+    width: 70px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+</style>

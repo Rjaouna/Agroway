@@ -10,4 +10,8 @@ p {
     font-size: 1.5rem;     /* Un peu plus grand que le texte général */
     line-height: 1.7;       /* Respiration du texte */
 }
+.footer {
+    font-size: 1rem; /* Ajuste la taille comme tu veux */
+    font-weight: 100;
+}
 

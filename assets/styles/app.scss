@@ -8,7 +8,9 @@
 }
 
 // 🎨 Tes couleurs personnalisées (avant Bootswatch !)
-$primary: #FF0000;        // Exemple vert
+$primary: #FF0000;        
+$primarylado: #D70B4E;        
+$primarypralichocco: #CC2125;        
 $secondary: #6c757d;
 $success: #20c997;
 $info: #17a2b8;
@@ -24,6 +26,8 @@ $backgroundblack: #060606;
 // 🌈 Ton propre set si tu veux
 $theme-colors: (
   "primary": $primary,
+  "primarylado": $primarylado,
+  "primarypralichocco": $primarypralichocco,
   "secondary": $secondary,
   "success": $success,
   "info": $info,
