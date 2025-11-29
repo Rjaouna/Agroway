@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-{{colorTheme}}  shadow-lg border-0 position-absolute start-0 end-0 mx-2 z-3" style="top: 20px;" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-{{colorTheme}}  shadow-lg border-0 position-absolute start-0 end-0 mx-2 z-3" style="top: 20px;" data-bs-theme="light">
+
+
 
 
 	<div
@@ -35,7 +37,9 @@
 							</a>
 						</li>
 						<li>
-							<a class="dropdown-item text-white" href="#">
+<a class="dropdown-item text-white" href="{{path('app_pralichocco')}}">
+
+
 								Pâte à tartiner
 							</a>
 						</li>
@@ -46,15 +50,17 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link text-white" href="#">Nouveautés</a>
+<a class="nav-link text-white" href="{{path('app_nouveautes')}}">Nouveautés</a>
+
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link text-white" href="#">Événements</a>
+<a class="nav-link text-white" href="{{path('app_evenements')}}">Événements</a>
+
 				</li>
 <li class="nav-item"></li>
 
-<a class="nav-link text-white" href="#">
+<a class="nav-link text-white" href="{{path('app_promotions')}}">
 
 		<i class="bi bi-stars"></i>
 		Promotions
@@ -63,7 +69,8 @@
 
 
 				<li class="nav-item">
-					<a class="nav-link text-white" href="#">Contact</a>
+<a class="nav-link text-white" href="{{path('app_contact')}}">Contact</a>
+
 				</li>
 
 			</ul>
@@ -86,11 +93,26 @@
 	}
 
 	/* Visible quand actif */
-	.navbar-nav .nav-link.active {
-		color: #242424ff !important;
+.navbar-nav .nav-link.active {
+
 		transform: scale(1.12);
 		font-weight: 600;
 	}
+	.dropdown-item:hover {
+    background-color: color-mix(in srgb, var(--bs-{{colorTheme}}) 70%, transparent);
+
+}
+
+.dropdown-item {
+    transition: transform 0.25s ease;
+    transform-origin: center;
+}
+
+.dropdown-item:hover {
+    transform: rotate(3deg) translateX(5px);
+}
+
+
 </style>
 
 {% block javascripts %}
@@ -105,5 +127,9 @@
 					});
 				});
 			});
+
+
+
+
 		</script>
 {% endblock %}

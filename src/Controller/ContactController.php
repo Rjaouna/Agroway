@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-final class LaddoController extends AbstractController
+final class ContactController extends AbstractController
 {
-    #[Route('groupe/agroway/cat/laddo', name: 'app_laddo')]
+    #[Route('/agroway/contact', name: 'app_contact')]
     public function index(): Response
     {
-        return $this->render('laddo/index.html.twig', [
-            'controller_name' => 'LaddoController',
+        return $this->render('contact/index.html.twig', [
+            'controller_name' => 'ContactController',
         ]);
     }
 }

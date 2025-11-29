@@ -1,0 +1,173 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Événements
+{% endblock %}
+
+{% block body %}
+
+	<!-- 🟦 SECTION HÉRO PROFESSIONNELLE -->
+	<section class="events-hero text-center py-6 mt-5">
+		<div class="container">
+			<h1 class="display-4 fw-bold text-dark mb-3">
+				Nos
+				<span class="text-{{ colorTheme }}">Événements</span>
+			</h1>
+			<p class="lead text-secondary mx-auto" style="max-width: 750px;">
+				Un rendez-vous incontournable autour de nos animations, dégustations et salons où l’artisanat, 
+				            la gourmandise et l’innovation se rencontrent.
+			</p>
+		</div>
+	</section>
+
+	<!-- ⭐ SÉPARATEUR -->
+	<div class="event-separator"></div>
+
+	<!-- 🟩 LISTE DES ÉVÉNEMENTS -->
+	<section class="events-list py-6">
+		<div class="container">
+			<div
+				class="row g-5">
+
+				<!-- 🔥 Événement 1 -->
+				<div class="col-lg-4">
+					<div class="event-card shadow-lg border-0 rounded-4 overflow-hidden">
+						<div class="event-image-wrap">
+							<img src="{{ asset('assets/img/events/1416x466px-push-corpo-desktop-glaces-match-cones.webp') }}" class="event-img" alt="Festival de la glace - Lyon">
+							<div class="event-badge">12 AVR. 2025</div>
+						</div>
+
+						<div class="p-4">
+							<h4 class="fw-bold mb-1">Festival de la Glace Artisanale</h4>
+							<p class="event-location">
+								<i class="bi bi-geo-alt"></i>
+								Marrakech, Rabat</p>
+
+							<p class="event-description">
+								Un événement incontournable réunissant les meilleurs artisans glaciers.  
+								                            Découvrez nos nouvelles créations et profitez de dégustations exclusives.
+							</p>
+
+							<a href="#" class="btn btn-{{ colorTheme }} w-100">En savoir plus</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- 🔥 Événement 2 -->
+				<div class="col-lg-4">
+					<div class="event-card shadow-lg border-0 rounded-4 overflow-hidden">
+						<div class="event-image-wrap">
+							<img src="{{ asset('assets/img/events/1416x466px-push-corpo-desktop-glaces-match-cones.webp') }}" class="event-img" alt="Marché gourmand - Paris">
+							<div class="event-badge">28 MAI 2025</div>
+						</div>
+
+						<div class="p-4">
+							<h4 class="fw-bold mb-1">Marché Gourmand & Chocolaté</h4>
+							<p class="event-location">
+								<i class="bi bi-geo-alt"></i>
+								casablanca</p>
+
+							<p class="event-description">
+								Une immersion gourmande dédiée au chocolat et aux pralinés.  
+								                            Ateliers, démonstrations, rencontres et dégustations au programme.
+							</p>
+
+							<a href="#" class="btn btn-{{ colorTheme }} w-100">En savoir plus</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- 🔥 Événement 3 -->
+				<div class="col-lg-4">
+					<div class="event-card shadow-lg border-0 rounded-4 overflow-hidden">
+						<div class="event-image-wrap">
+							<img src="{{ asset('assets/img/events/1416x466px-push-corpo-desktop-glaces-match-cones.webp') }}" class="event-img" alt="Salon artisanal - Marseille">
+							<div class="event-badge">09 JUIN 2025</div>
+						</div>
+
+						<div class="p-4">
+							<h4 class="fw-bold mb-1">Salon de l’Artisanat & Saveurs</h4>
+							<p class="event-location">
+								<i class="bi bi-geo-alt"></i>
+								Rabat, Agadir</p>
+
+							<p class="event-description">
+								Un salon mettant en lumière les artisans passionnés.  
+								                            Dégustations gratuites et nouveautés présentées en exclusivité.
+							</p>
+
+							<a href="#" class="btn btn-{{ colorTheme }} w-100">En savoir plus</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- 📱 Réseaux sociaux -->
+	{{ include('_partials/_socials/_socials.html.twig') }}
+
+	<style>
+		/* ⭐ HERO PRO */
+		.events-hero {
+			background: linear-gradient(135deg, #fff, #f5f5f5);
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+
+		/* ⭐ Séparateur premium */
+		.event-separator {
+			width: 120px;
+			height: 5px;
+			background: var(--bs-{{ colorTheme }});
+			opacity: 0.8;
+			border-radius: 10px;
+			margin: 0 auto 3rem;
+		}
+
+		/* ⭐ CARD PRO */
+		.event-card {
+			background: #ffffff;
+			transition: all 0.35s ease;
+		}
+		.event-card:hover {
+			transform: translateY(-8px) scale(1.02);
+			box-shadow: 0 22px 48px rgba(0, 0, 0, 0.15);
+		}
+
+		/* ⭐ IMAGE + BADGE DATE */
+		.event-image-wrap {
+			position: relative;
+		}
+		.event-img {
+			height: 240px;
+			width: 100%;
+			object-fit: cover;
+		}
+		.event-badge {
+			position: absolute;
+			top: 18px;
+			left: 18px;
+			background: var(--bs-{{ colorTheme }});
+			color: #fff;
+			font-size: 0.9rem;
+			font-weight: 600;
+			padding: 6px 14px;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+		}
+
+		/* ⭐ TEXTES */
+		.event-location {
+			font-size: 0.95rem;
+			color: #7d7d7d;
+		}
+		.event-description {
+			font-size: 0.88rem;
+			color: #666;
+			min-height: 85px;
+		}
+	</style>
+
+{% endblock %}
+

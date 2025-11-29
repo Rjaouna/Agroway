@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Promotions
+{% endblock %}
+
+{% block body %}
+
+	<!-- 🟦 HERO PROMOS -->
+	<section class="promo-hero text-center py-6 mt-5">
+		<div class="container">
+			<h1 class="display-5 fw-bold text-dark mb-3">
+				Nos
+				<span class="text-{{ colorTheme }}">Promotions</span>
+			</h1>
+			<p class="text-secondary fs-5 mx-auto" style="max-width: 750px;">
+				Profitez de nos offres exceptionnelles sur une sélection de produits gourmands.
+			</p>
+		</div>
+	</section>
+
+	<!-- ⭐ SÉPARATEUR -->
+	<div class="promo-separator"></div>
+
+	<!-- 🛒 SECTION PROMOTIONS -->
+	<section class="promo-section py-6">
+		<div class="container">
+
+			<div
+				class="row g-5">
+
+				<!-- 🎉 Promo 1 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="promo-card shadow-lg rounded-4 overflow-hidden position-relative">
+						<span class="promo-badge">-20%</span>
+
+						<img src="{{ asset('assets/img/01.jpg') }}" class="promo-img" alt="Pistache">
+
+						<div class="p-4">
+							<h4 class="fw-bold text-dark">Glace Pistache Artisanale</h4>
+							<p class="text-secondary small">Crémeuse, naturelle et riche en saveurs.</p>
+
+							<div class="d-flex align-items-center mb-3">
+								<span class="fs-4 fw-bold text-{{ colorTheme }}">8.50€</span>
+								<span class="text-decoration-line-through text-secondary ms-3">10.50€</span>
+							</div>
+
+							<a href="#" class="btn btn-{{ colorTheme }} w-100 rounded-pill">Découvrir</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- 🎉 Promo 2 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="promo-card shadow-lg rounded-4 overflow-hidden position-relative">
+						<span class="promo-badge">-30%</span>
+
+						<img src="{{ asset('assets/img/05.jpg') }}" class="promo-img" alt="Pâte à tartiner">
+
+						<div class="p-4">
+							<h4 class="fw-bold text-dark">Pâte à Tartiner Noisette</h4>
+							<p class="text-secondary small">Sans huile de palme, saveur intense.</p>
+
+							<div class="d-flex align-items-center mb-3">
+								<span class="fs-4 fw-bold text-{{ colorTheme }}">4.90€</span>
+								<span class="text-decoration-line-through text-secondary ms-3">6.99€</span>
+							</div>
+
+							<a href="#" class="btn btn-{{ colorTheme }} w-100 rounded-pill">Découvrir</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- 🎉 Promo 3 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="promo-card shadow-lg rounded-4 overflow-hidden position-relative">
+						<span class="promo-badge">-15%</span>
+
+						<img src="{{ asset('assets/img/04.jpg') }}" class="promo-img" alt="Caramel beurre salé">
+
+						<div class="p-4">
+							<h4 class="fw-bold text-dark">Glace Caramel Beurre Salé</h4>
+							<p class="text-secondary small">Un mélange parfait entre douceur & caractère.</p>
+
+							<div class="d-flex align-items-center mb-3">
+								<span class="fs-4 fw-bold text-{{ colorTheme }}">7.65€</span>
+								<span class="text-decoration-line-through text-secondary ms-3">8.99€</span>
+							</div>
+
+							<a href="#" class="btn btn-{{ colorTheme }} w-100 rounded-pill">Découvrir</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!-- 🌐 Réseaux sociaux -->
+	{{ include('_partials/_socials/_socials.html.twig') }}
+
+	<style>
+
+		/* HERO */
+		.promo-hero {
+			background: linear-gradient(135deg, #ffffff, #f5f5f5);
+			padding-top: 6rem;
+			padding-bottom: 5rem;
+		}
+
+
+		/* SEPARATOR */
+		.promo-separator {
+			width: 120px;
+			height: 5px;
+			background: var(--bs-{{ colorTheme }});
+			opacity: 0.85;
+			border-radius: 10px;
+			margin: 0 auto 3rem;
+		}
+
+		/* CARD */
+		.promo-card {
+			background: #fff;
+			transition: 0.35s ease;
+		}
+		.promo-card:hover {
+			transform: translateY(-6px) scale(1.02);
+			box-shadow: 0 22px 48px rgba(0, 0, 0, 0.15);
+		}
+
+		.promo-img {
+			width: 100%;
+			height: 220px;
+			object-fit: cover;
+		}
+
+		/* BADGE RÉDUCTION */
+		.promo-badge {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			background: var(--bs-{{ colorTheme }});
+			color: #fff;
+			padding: 6px 14px;
+			font-weight: 600;
+			font-size: 0.9rem;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+		}
+	</style>
+
+{% endblock %}
+

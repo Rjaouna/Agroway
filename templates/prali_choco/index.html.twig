@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prali Choco
+{% endblock %}
+
+{% block body %}
+
+	<section class="prali-hero">
+    
+		<section class="prali-hero-premium d-flex align-items-center">
+			<div class="container text-center">
+
+<img src="{{ asset('assets/img/logos/prali-choco-red-black.svg') }}" class="prali-hero-logo mb-4" alt="Logo Prali Choco">
+
+
+
+				<h1 class="fw-bold display-3 text-dark">
+					La Collection
+					<span class="text-primarychoco">Prali Choco</span>
+				</h1>
+
+				<p class="lead text-secondary mx-auto mt-3" style="max-width: 650px;">
+					Une expérience chocolatée intense, gourmande et raffinée.  
+					            Découvrez l’univers Prali Choco : un équilibre parfait entre douceur pralinée et caractère cacao.
+				</p>
+
+				<a href="#prali-gamme" class="btn btn-choco btn-lg px-5 py-3 mt-4 shadow premium-btn">
+					Découvrir la gamme
+				</a>
+			</div>
+		</section>
+
+		<section id="prali-gamme" class="prali-presentation py-5">
+			<div class="container">
+				<div class="row align-items-center g-5">
+
+					<div class="col-lg-6">
+						<h2 class="fw-bold text-dark mb-4 display-5">
+							Une gamme au
+							<span class="text-primarychoco">caractère chocolaté</span>
+						</h2>
+
+						<p class="fs-5 text-secondary">
+							Prali Choco incarne l’harmonie parfaite entre la force du cacao et la finesse du praliné :  
+												des textures généreuses, des parfums chaleureux et une élégance gourmande.
+						</p>
+
+						<ul class="list-unstyled fs-5 mt-4">
+							<li>✔ Saveurs intenses chocolat & praliné</li>
+							<li>✔ Ingrédients premium sélectionnés</li>
+							<li>✔ Présentation soignée</li>
+							<li>✔ Authenticité et savoir-faire artisanal</li>
+						</ul>
+
+					</div>
+
+					<div class="col-lg-6 text-center">
+						<img src="{{ asset('assets/img/prali-choco-mini-banner.jpg') }}" class="img-fluid rounded-4 shadow-lg prali-prez-image" alt="Gamme Prali Choco">
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+{{ include('_partials/_gamme_prali_choco/_gamme_prali_choco.html.twig') }}
+
+
+
+		<style>
+
+
+
+
+			.product-premium {
+				background-color: #ffffff;
+				border-radius: 20px;
+				transition: all 0.4s ease;
+			}
+			.product-premium:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+			}
+			.product-premium img {
+				transition: transform 0.35s ease;
+			}
+			.product-premium:hover img {
+				transform: scale(1.07) rotate(2deg);
+			}
+
+			/* IMAGE PRÉSENTATION */
+			.prali-prez-image {
+				transition: all 0.5s ease;
+			}
+			.prali-prez-image:hover {
+				transform: scale(1.04) translateY(-5px);
+				box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+			}
+
+			/* BANNIÈRE HÉRO */
+			.prali-hero-premium {
+				background: url('{{ asset("assets/img/prali-choco-banner.jpg") }}') center/cover no-repeat;
+				min-height: 80vh;
+				position: relative;
+			}
+			.prali-hero-premium::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: rgba(255, 255, 255, 0.65);
+			}
+			.prali-hero-premium .container {
+				position: relative;
+				z-index: 5;
+			}
+
+			.prali-hero-logo {
+				width: 180px;
+				filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+			}
+
+			/* BOUTON */
+			.premium-btn {
+				border-radius: 40px;
+				font-weight: bold;
+				transition: all 0.3s ease;
+			}
+			.premium-btn:hover {
+				transform: scale(1.05);
+				box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+			}
+		</style>
+
+	{% endblock %}
+

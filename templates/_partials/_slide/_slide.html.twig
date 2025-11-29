@@ -1,8 +1,10 @@
 <div id="carouselExampleDark" class="carousel carousel-dark slide">
-	<div class="carousel-indicators">
+	<div class="carousel-indicators home-carousel">
 		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active bg-primary"></button>
-		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="bg-info"></button>
-		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="bg-info"></button>
+<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="bg-primary"></button>
+
+<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="bg-primary"></button>
+
 	</div>
 
 	<div
@@ -57,9 +59,12 @@
 				<h1 class="fw-bold display-1 text-primarylado">Le plaisir glacé continue</h1>
 				<h2 class="mb-4 text-foregroundblack">Encore plus de saveurs à découvrir.</h2>
 
-<a id="btnDiscoverGlaces" href="#" class="btn btn-lg btn-foregroundwhite text-foregroundblack px-5 py-3 shadow">
+<a id="btnDiscoverGlaces" href="{{path('app_laddo')}}" class="btn btn-lg btn-foregroundwhite text-foregroundblack px-5 py-3 shadow">
 
-					<span class="fw-bold">Voir les nouveautés</span>
+
+<span class="fw-bold">Découvrir la gamme Laddo !</span>
+
+
 				</a>
 			</div>
 		</div>
@@ -84,9 +89,12 @@
 				<h1 class="fw-bold display-1 text-primarypralichocco">Le plaisir glacé continue</h1>
 				<h2 class="mb-4 text-foregroundblack">Encore plus de saveurs à découvrir.</h2>
 
-<a id="btnDiscoverGlaces" href="#" class="btn btn-lg btn-foregroundwhite text-foregroundblack px-5 py-3 shadow">
+<a id="btnDiscoverGlaces" href="{{path('app_pralichocco')}}" class="btn btn-lg btn-foregroundwhite text-foregroundblack px-5 py-3 shadow">
 
-					<span class="fw-bold">Voir les nouveautés</span>
+
+
+<span class="fw-bold">Découvrir la gamme Prali Choco !</span>
+
 				</a>
 			</div>
 		</div>
@@ -103,6 +111,24 @@
 </div>
 
 <style>
+.home-carousel [data-bs-target] {
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff !important;
+    opacity: .7;
+    margin: 0 6px;
+    transition: all .3s ease;
+}
+
+.home-carousel .active {
+
+
+    opacity: 1;
+    transform: scale(1.3);
+}
+
 	.carousel-center-content {
 		position: absolute;
 		top: 40%;

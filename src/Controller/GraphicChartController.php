@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class GraphicChartController extends AbstractController
 {
-    #[Route('/graphic/chart', name: 'app_graphic_chart')]
+    #[Route('/agroway/graphic/chart', name: 'app_graphic_chart')]
     public function index(): Response
     {
         return $this->render('graphic_chart/index.html.twig', [
